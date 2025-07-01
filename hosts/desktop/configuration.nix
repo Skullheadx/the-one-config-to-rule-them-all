@@ -39,7 +39,7 @@
 		neofetch
 		firefox
 		ghostty
-		alakritty
+		alacritty
 		discord
 		git
 		github-desktop
