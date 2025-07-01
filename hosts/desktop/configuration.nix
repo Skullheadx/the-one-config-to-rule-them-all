@@ -29,6 +29,11 @@
 
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
+	programs.nix-ld.enable = true;
+	programs.nix-ld.libraries = with pkgs; [
+	  # Add any missing dynamic libraries for unpackaged 
+	  # programs here, NOT in environment.systemPackages
+	];
 
 	#Enable Flakes
 	nix.settings.experimental-features=[ "nix-command" "flakes" ];
@@ -46,10 +51,13 @@
 		git
 		github-desktop
 		obsidian
-		steam
 		brave
 	];
-
+	programs.steam = {
+	  enable = true;
+	  remotePlay.openFirewall = true;
+	  dedicatedServer.openFirewall = true;
+	};
 	#programs.niri.enable = true;
 	#programs.hyprland.enable = true;
 
