@@ -9,9 +9,14 @@
 	diskencryption.enable = false;
 	networking.hostName = "desktop";
 
-	# Enable the KDE Plasma Desktop Environment.
 	services.displayManager.sddm.enable = true;
+	services.displayManager.ssdm.wayland.enable = true;
+	/*
+	# Enable the KDE Plasma Desktop Environment.
 	services.desktopManager.plasma6.enable = true;
+	*/
+
+
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.skull = {
@@ -45,6 +50,7 @@
 		obsidian
 		steam
 		brave
+		niri
 	];
 
 
