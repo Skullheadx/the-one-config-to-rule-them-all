@@ -10,12 +10,9 @@
 	networking.hostName = "desktop";
 
 	services.displayManager.sddm.enable = true;
-	/*
+	services.displayManager.sddm.wayland.enable = true;
 	# Enable the KDE Plasma Desktop Environment.
 	services.desktopManager.plasma6.enable = true;
-	*/
-
-
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.skull = {
@@ -26,8 +23,7 @@
 	};
 
 	# Enable automatic login for the user.
-	services.displayManager.autoLogin.enable = true;
-	services.displayManager.autoLogin.user = "skull";
+	#services.displayManager.autoLogin.enable = true; services.displayManager.autoLogin.user = "skull";
 
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
@@ -43,14 +39,16 @@
 		neofetch
 		firefox
 		ghostty
+		alakritty
 		discord
 		git
 		github-desktop
 		obsidian
 		steam
 		brave
-		niri
 	];
+
+	programs.niri.enable = true;
 
 
 	# Some programs need SUID wrappers, can be configured further or are
