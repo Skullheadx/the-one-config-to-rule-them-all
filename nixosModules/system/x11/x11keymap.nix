@@ -4,7 +4,7 @@
 	services.xserver.xkb = {
 		layout = "us";
 		variant = "";
-		xkb.options = "caps:escape";
+		options = "caps:escape";
 	};
 	services.kmscon.useXkbConfig = true;
 }
