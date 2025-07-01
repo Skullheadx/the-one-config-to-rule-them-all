@@ -9,5 +9,6 @@
 		./CUPS.nix
 		./sound.nix
 		./touchpad.nix
+		./x11/x11keymap.nix
 	];
 }

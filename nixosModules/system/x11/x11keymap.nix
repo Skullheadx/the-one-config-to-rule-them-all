@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+{pkgs, lib, ... }:
 {
 	# Configure keymap in X11
 	services.xserver.xkb = {
 		layout = "us";
 		variant = "";
+		xkbOptions = "caps:escape";
 	};
 }
