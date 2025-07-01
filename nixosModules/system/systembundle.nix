@@ -9,6 +9,9 @@
 		./CUPS.nix
 		./sound.nix
 		./touchpad.nix
+		./dynamiclibraries.nix
 		./x11/x11keymap.nix
+		./sddm.nix
+		./autologin.nix
 	];
 }
