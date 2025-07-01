@@ -2,7 +2,7 @@
 	description = "the very best config for nixos";
 
 	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
+		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
 	};
 	outputs = { self, nixpkgs }@inputs : {
