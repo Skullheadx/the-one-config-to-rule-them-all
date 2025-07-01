@@ -10,9 +10,11 @@
 	networking.hostName = "desktop";
 
 	services.displayManager.sddm.enable = true;
-	services.displayManager.sddm.xwayland.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
 	# Enable the KDE Plasma Desktop Environment.
 	services.desktopManager.plasma6.enable = true;
+	
+	programs.xwayland.enable = true;
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.skull = {
